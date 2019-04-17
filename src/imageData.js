@@ -1,0 +1,20 @@
+export const imageData = [
+  { file: './images/bear.png', title: 'bear' },
+  { file: './images/bird.png', title: 'bird' },
+  { file: './images/cat.png', title: 'cat' },
+  { file: './images/chicken.png', title: 'chicken' },
+  { file: './images/cow.png', title: 'cow' },
+  { file: './images/dog.png', title: 'dog' },
+  { file: './images/fish.png', title: 'fish' },
+  { file: './images/fox.png', title: 'fox' },
+  { file: './images/frog.png', title: 'frog' },
+  { file: './images/goat.png', title: 'goat' },
+  { file: './images/lion.png', title: 'lion' },
+  { file: './images/mouse.png', title: 'mouse' },
+  { file: './images/pig.png', title: 'pig' },
+  { file: './images/rabbit.png', title: 'rabbit' },
+  { file: './images/shark.png', title: 'shark' },
+  { file: './images/snake.png', title: 'snake' },
+  { file: './images/tiger.png', title: 'tiger' },
+  { file: './images/zebra.png', title: 'zebra' }
+];

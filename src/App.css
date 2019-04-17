@@ -1,33 +1,120 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Jua', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+html {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  background: rgba(233, 116, 7, 0.804);
+  max-width: 1024px;
+  max-height: 768px;
+  border-radius: 10px;
+  padding: 50px 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.top-half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image img {
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+
+.text-box-container {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: rgb(193, 233, 198);
+  font-size: 3rem;
+}
+
+.text-box-and-clear-button {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  margin-top: 5px;
+}
+
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: whitesmoke;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  height: 90%;
+  margin-top: 1%;
+  font-size: 3rem;
+}
+
+.text-box-and-clear-button button {
+  font-size: 2rem;
+  border: 1px solid black;
+}
+
+.form-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 2.5%;
+}
+
+.submit-play-button button {
+  width: 90%;
+  height: 90%;
+  border: 1px solid black;
+  font-size: 2rem;
+}
+
+.bottom-half {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.letter-buttons {
+  width: 95px;
+  height: 95px;
+  font-size: 3rem;
 }
