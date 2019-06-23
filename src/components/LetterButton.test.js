@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr } from '../utilities/utilitiesForTests';
+import { findByTestAttr, checkProps } from '../utilities/utilitiesForTests';
 import LetterButton from './LetterButton';
 
 const testProps = {
@@ -17,5 +17,13 @@ describe('Letter Button component', () => {
   it('Should render without errors', () => {
     const button = findByTestAttr(component, 'letterButton');
     expect(button.length).toBe(1);
+  });
+
+  describe('Checking PropTypes', () => {
+    it('Should not throw a warning', () => {
+      const expectedProps = testProps;
+      const propsError = checkProps(LetterButton, expectedProps);
+      expect(propsError).toBeUndefined();
+    });
   });
 });
