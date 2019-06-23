@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TextForm from './components/TextForm';
 import AnimalImage from './components/AnimalImage';
 import Keyboard from './components/Keyboard';
-import { imageData } from './imageData';
+import { imageData } from './utilities/imageData';
 
 import './App.css';
 
