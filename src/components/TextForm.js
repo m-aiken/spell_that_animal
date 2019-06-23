@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SubmitButton from './SubmitButton';
 import ClearText from './ClearText';
 import PlayAgain from './PlayAgain';
-import { correct, incorrect } from '../messages';
+import { correct, incorrect } from '../utilities/messages';
 
 let successStatus;
 
