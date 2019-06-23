@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr } from '../../utilities/utilities';
+import { findByTestAttr } from '../utilities/utilitiesForTests';
 import LetterButton from './LetterButton';
 
 const testProps = {

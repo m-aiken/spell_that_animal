@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LetterButton from './LetterButton';
-import { alphabet } from '../alphabet';
+import { alphabet } from '../utilities/alphabet';
 
 const Keyboard = props => {
   return alphabet.map(letter => {
