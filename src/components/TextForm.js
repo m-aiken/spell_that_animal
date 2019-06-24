@@ -24,12 +24,19 @@ const TextForm = props => {
 
   return (
     <Fragment>
-      <div className="message">{successStatus}</div>
-      <div className="text-box-and-clear-button">
-        <div className="text-box">{props.text}</div>
+      <div className="message" data-test="messageBox">
+        {successStatus}
+      </div>
+      <div
+        className="text-box-and-clear-button"
+        data-test="inputAndClearContainer"
+      >
+        <div className="text-box" data-test="textInput">
+          {props.text}
+        </div>
         <ClearText clearText={props.clearText} />
       </div>
-      <div className="form-buttons">
+      <div className="form-buttons" data-test="goPlayContainer">
         <SubmitButton submit={props.submit} />
         <PlayAgain resetImage={props.resetImage} />
       </div>
@@ -38,7 +45,7 @@ const TextForm = props => {
 };
 
 TextForm.propTypes = {
-  success: PropTypes.bool.isRequired,
+  success: PropTypes.bool,
   text: PropTypes.string.isRequired,
   clearText: PropTypes.func.isRequired,
   resetImage: PropTypes.func.isRequired,

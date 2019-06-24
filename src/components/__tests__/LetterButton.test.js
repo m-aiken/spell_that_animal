@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../utilities/utilitiesForTests';
-import LetterButton from './LetterButton';
+import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
+import LetterButton from '../LetterButton';
 
 const testProps = {
   value: 'a',
@@ -21,8 +21,7 @@ describe('Letter Button component', () => {
 
   describe('Checking PropTypes', () => {
     it('Should not throw a warning', () => {
-      const expectedProps = testProps;
-      const propsError = checkProps(LetterButton, expectedProps);
+      const propsError = checkProps(LetterButton, testProps);
       expect(propsError).toBeUndefined();
     });
   });

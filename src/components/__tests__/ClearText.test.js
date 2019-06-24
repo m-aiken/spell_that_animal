@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../utilities/utilitiesForTests';
-import ClearText from './ClearText';
+import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
+import ClearText from '../ClearText';
 
 const testProps = {
   clearText: () => {}
@@ -20,8 +20,7 @@ describe('Clear Text component', () => {
 
   describe('Checking PropTypes', () => {
     it('Should not throw a warning', () => {
-      const expectedProps = testProps;
-      const propsError = checkProps(ClearText, expectedProps);
+      const propsError = checkProps(ClearText, testProps);
       expect(propsError).toBeUndefined();
     });
   });
