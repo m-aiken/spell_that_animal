@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../utilities/utilitiesForTests';
-import AnimalImage from './AnimalImage';
+import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
+import AnimalImage from '../AnimalImage';
 
 const testProps = {
   image: 'Test String'
@@ -25,8 +25,7 @@ describe('Animal Image component', () => {
 
   describe('Checking PropTypes', () => {
     it('Should not throw a warning', () => {
-      const expectedProps = testProps;
-      const propsError = checkProps(AnimalImage, expectedProps);
+      const propsError = checkProps(AnimalImage, testProps);
       expect(propsError).toBeUndefined();
     });
   });
