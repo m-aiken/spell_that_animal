@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
 import LetterButton from '../LetterButton';
 
 const testProps = {
@@ -9,13 +6,13 @@ const testProps = {
 };
 
 describe('Letter Button component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<LetterButton {...testProps} />);
+    wrapper = shallow(<LetterButton {...testProps} />);
   });
 
   it('Should render without errors', () => {
-    const button = findByTestAttr(component, 'letterButton');
+    const button = findByTestAttr(wrapper, 'letterButton');
     expect(button.length).toBe(1);
   });
 

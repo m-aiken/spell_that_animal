@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
 import AnimalImage from '../AnimalImage';
 
 const testProps = {
@@ -8,18 +5,18 @@ const testProps = {
 };
 
 describe('Animal Image component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<AnimalImage {...testProps} />);
+    wrapper = shallow(<AnimalImage {...testProps} />);
   });
 
   it('Should render div without errors', () => {
-    const imageDiv = findByTestAttr(component, 'animalImageComponent');
+    const imageDiv = findByTestAttr(wrapper, 'animalImageComponent');
     expect(imageDiv.length).toBe(1);
   });
 
   it('Should render image without errors', () => {
-    const image = findByTestAttr(component, 'animalImage');
+    const image = findByTestAttr(wrapper, 'animalImage');
     expect(image.length).toBe(1);
   });
 

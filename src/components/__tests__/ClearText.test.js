@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
 import ClearText from '../ClearText';
 
 const testProps = {
@@ -8,13 +5,13 @@ const testProps = {
 };
 
 describe('Clear Text component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<ClearText {...testProps} />);
+    wrapper = shallow(<ClearText {...testProps} />);
   });
 
   it('Should render without errors', () => {
-    const button = findByTestAttr(component, 'clearTextButton');
+    const button = findByTestAttr(wrapper, 'clearTextButton');
     expect(button.length).toBe(1);
   });
 
