@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
 import TextForm from '../TextForm';
 
 const testProps = {
@@ -12,35 +9,35 @@ const testProps = {
 };
 
 describe('TextForm component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<TextForm {...testProps} />);
+    wrapper = shallow(<TextForm {...testProps} />);
   });
 
   describe('Message box', () => {
     it('Should render without errors', () => {
-      const messageBox = findByTestAttr(component, 'messageBox');
+      const messageBox = findByTestAttr(wrapper, 'messageBox');
       expect(messageBox.length).toBe(1);
     });
   });
 
   describe('Text input and clear button container', () => {
     it('Should render without errors', () => {
-      const inputAndClear = findByTestAttr(component, 'inputAndClearContainer');
+      const inputAndClear = findByTestAttr(wrapper, 'inputAndClearContainer');
       expect(inputAndClear.length).toBe(1);
     });
   });
 
   describe('Text input', () => {
     it('Should render without errors', () => {
-      const textInput = findByTestAttr(component, 'textInput');
+      const textInput = findByTestAttr(wrapper, 'textInput');
       expect(textInput.length).toBe(1);
     });
   });
 
   describe('Form buttons container (Go! and Play Again!)', () => {
     it('Should render without errors', () => {
-      const formButtons = findByTestAttr(component, 'goPlayContainer');
+      const formButtons = findByTestAttr(wrapper, 'goPlayContainer');
       expect(formButtons.length).toBe(1);
     });
   });

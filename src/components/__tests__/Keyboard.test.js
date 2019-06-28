@@ -1,5 +1,3 @@
-import React from 'react';
-import { checkProps } from '../../utilities/utilitiesForTests';
 import Keyboard from '../Keyboard';
 
 describe('Keyboard component', () => {

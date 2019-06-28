@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
 import SubmitButton from '../SubmitButton';
 
 const testProps = {
@@ -8,21 +5,21 @@ const testProps = {
 };
 
 describe('SubmitButton component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<SubmitButton {...testProps} />);
+    wrapper = shallow(<SubmitButton {...testProps} />);
   });
 
   describe('Container Div', () => {
     it('Should render without errors', () => {
-      const containerDiv = findByTestAttr(component, 'submitContainer');
+      const containerDiv = findByTestAttr(wrapper, 'submitContainer');
       expect(containerDiv.length).toBe(1);
     });
   });
 
   describe('Submit button', () => {
     it('Should render without errors', () => {
-      const button = findByTestAttr(component, 'submitButton');
+      const button = findByTestAttr(wrapper, 'submitButton');
       expect(button.length).toBe(1);
     });
   });

@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { findByTestAttr, checkProps } from '../../utilities/utilitiesForTests';
 import PlayAgain from '../PlayAgain';
 
 const testProps = {
@@ -8,21 +5,21 @@ const testProps = {
 };
 
 describe('PlayAgain component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = shallow(<PlayAgain {...testProps} />);
+    wrapper = shallow(<PlayAgain {...testProps} />);
   });
 
   describe('Container Div', () => {
     it('Should render without errors', () => {
-      const containerDiv = findByTestAttr(component, 'playAgainContainer');
+      const containerDiv = findByTestAttr(wrapper, 'playAgainContainer');
       expect(containerDiv.length).toBe(1);
     });
   });
 
   describe('Play Again button', () => {
     it('Should render without errors', () => {
-      const button = findByTestAttr(component, 'playAgainButton');
+      const button = findByTestAttr(wrapper, 'playAgainButton');
       expect(button.length).toBe(1);
     });
   });
