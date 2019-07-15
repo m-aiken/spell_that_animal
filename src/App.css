@@ -47,6 +47,14 @@ html {
   justify-content: center;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .image img {
   display: block;
   max-width: 300px;

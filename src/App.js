@@ -11,7 +11,6 @@ class App extends Component {
     super();
     this.state = {
       text: '',
-      image: '',
       imageText: '',
       correct: null
     };
@@ -19,8 +18,7 @@ class App extends Component {
 
   componentDidMount() {
     const randomIdx = Math.floor(Math.random() * 18);
-    const randomImage = imageData[randomIdx];
-    this.setState({ image: randomImage.file, imageText: randomImage.title });
+    this.setState({ imageText: imageData[randomIdx].title });
   }
 
   updateText = e => {
@@ -42,10 +40,9 @@ class App extends Component {
   resetImage = e => {
     e.preventDefault();
     const randomIdx = Math.floor(Math.random() * 18);
-    const randomImage = imageData[randomIdx];
     this.setState({
-      image: randomImage.file,
-      imageText: randomImage.title,
+      text: '',
+      imageText: imageData[randomIdx].title,
       correct: null
     });
   };
@@ -62,7 +59,16 @@ class App extends Component {
       <div className="container">
         <div className="top-half">
           <div className="image-container">
-            <AnimalImage image={this.state.image} />
+            {imageData.map((image, idx) => {
+              return (
+                <AnimalImage
+                  key={idx}
+                  image={image.file}
+                  title={image.title}
+                  currentlySelected={this.state.imageText}
+                />
+              );
+            })}
           </div>
           <div className="text-box-container">
             <TextForm
