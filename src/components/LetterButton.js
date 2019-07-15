@@ -6,7 +6,7 @@ const LetterButton = props => {
   return (
     <button
       data-test="letterButton"
-      className="btn btn-danger m-1 letter-buttons"
+      className="letter-buttons"
       value={value}
       onClick={updateText}
     >
