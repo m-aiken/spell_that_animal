@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import SubmitButton from './SubmitButton';
-import ClearText from './ClearText';
 import PlayAgain from './PlayAgain';
 import { correct, incorrect } from '../utilities/messages';
 
@@ -27,14 +26,8 @@ const TextForm = props => {
       <div className="message" data-test="messageBox">
         {successStatus}
       </div>
-      <div
-        className="text-box-and-clear-button"
-        data-test="inputAndClearContainer"
-      >
-        <div className="text-box" data-test="textInput">
-          {props.text}
-        </div>
-        <ClearText clearText={props.clearText} />
+      <div className="text-box" data-test="textInput">
+        {props.text}
       </div>
       <div className="form-buttons" data-test="goPlayContainer">
         <SubmitButton submit={props.submit} />
@@ -47,7 +40,6 @@ const TextForm = props => {
 TextForm.propTypes = {
   success: PropTypes.bool,
   text: PropTypes.string.isRequired,
-  clearText: PropTypes.func.isRequired,
   resetImage: PropTypes.func.isRequired,
   submit: PropTypes.func.isRequired
 };

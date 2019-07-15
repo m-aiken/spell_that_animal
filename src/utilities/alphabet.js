@@ -24,5 +24,6 @@ export const alphabet = [
   'w',
   'x',
   'y',
-  'z'
+  'z',
+  '←'
 ];

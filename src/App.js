@@ -27,14 +27,10 @@ class App extends Component {
     this.setState({ correct: null });
     this.setState(prevState => {
       return {
-        text: prevState.text + value
+        text:
+          value === '←' ? prevState.text.slice(0, -1) : prevState.text + value
       };
     });
-  };
-
-  clearText = e => {
-    e.preventDefault();
-    this.setState({ text: '', correct: null });
   };
 
   resetImage = e => {
@@ -56,7 +52,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="project-container">
         <div className="top-half">
           <div className="image-container">
             {imageData.map((image, idx) => {
@@ -74,7 +70,6 @@ class App extends Component {
             <TextForm
               success={this.state.correct}
               text={this.state.text}
-              clearText={this.clearText}
               resetImage={this.resetImage}
               submit={this.submit}
             />
