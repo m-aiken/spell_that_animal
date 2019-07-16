@@ -5,6 +5,9 @@ import Keyboard from './components/Keyboard';
 import { imageData } from './utilities/imageData';
 
 import './App.css';
+import './css/animalImage.css';
+import './css/textBox.css';
+import './css/keyboard.css';
 
 class App extends Component {
   constructor() {
@@ -66,14 +69,12 @@ class App extends Component {
               );
             })}
           </div>
-          <div className="text-box-container">
-            <TextForm
-              success={this.state.correct}
-              text={this.state.text}
-              resetImage={this.resetImage}
-              submit={this.submit}
-            />
-          </div>
+          <TextForm
+            success={this.state.correct}
+            text={this.state.text}
+            resetImage={this.resetImage}
+            submit={this.submit}
+          />
         </div>
         <div className="bottom-half">
           <div className="keyboard-container">

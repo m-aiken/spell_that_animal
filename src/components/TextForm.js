@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import SubmitButton from './SubmitButton';
 import PlayAgain from './PlayAgain';
@@ -22,7 +22,7 @@ const TextForm = props => {
   }
 
   return (
-    <Fragment>
+    <div className="text-box-container">
       <div className="message" data-test="messageBox">
         {successStatus}
       </div>
@@ -33,7 +33,7 @@ const TextForm = props => {
         <SubmitButton submit={props.submit} />
         <PlayAgain resetImage={props.resetImage} />
       </div>
-    </Fragment>
+    </div>
   );
 };
 

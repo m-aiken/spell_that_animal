@@ -1,0 +1,98 @@
+.text-box-container {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: rgb(193, 233, 198);
+  font-size: 1.5rem;
+  margin: 2.5px 5px;
+}
+
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: whitesmoke;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin: 2.5px 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.submit-button,
+.play-again-button {
+  font-size: 1.5rem;
+  padding: 0px 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none !important;
+  margin: 2.5px 5px;
+}
+
+.submit-button {
+  background-color: #007bff;
+}
+
+.submit-button:hover {
+  background-color: #003f83;
+  color: white;
+}
+
+.play-again-button {
+  background-color: #28a745;
+}
+
+.play-again-button:hover {
+  background-color: #186e2c;
+  color: white;
+}
+
+@media (min-width: 500px) {
+  .message,
+  .text-box,
+  .submit-button,
+  .play-again-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .message,
+  .text-box {
+    font-size: 1.7rem;
+  }
+
+  .submit-button,
+  .play-again-button {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .message,
+  .text-box {
+    font-size: 2.2rem;
+  }
+
+  .submit-button,
+  .play-again-button {
+    font-size: 1.8rem;
+    padding: 0px 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .message,
+  .text-box {
+    font-size: 2.8rem;
+  }
+}
