@@ -1,7 +1,9 @@
 import AnimalImage from '../AnimalImage';
 
 const testProps = {
-  image: 'Test String'
+  image: 'test string',
+  title: 'test string',
+  currentlySelected: 'test string'
 };
 
 describe('Animal Image component', () => {

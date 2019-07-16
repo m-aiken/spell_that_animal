@@ -2,8 +2,7 @@ import TextForm from '../TextForm';
 
 const testProps = {
   success: true,
-  text: 'Test text',
-  clearText: () => {},
+  text: 'test text',
   resetImage: () => {},
   submit: () => {}
 };
@@ -14,32 +13,24 @@ describe('TextForm component', () => {
     wrapper = shallow(<TextForm {...testProps} />);
   });
 
-  describe('Message box', () => {
-    it('Should render without errors', () => {
-      const messageBox = findByTestAttr(wrapper, 'messageBox');
-      expect(messageBox.length).toBe(1);
-    });
+  it('Should render container without errors', () => {
+    const container = findByTestAttr(wrapper, 'textBoxContainer');
+    expect(container.length).toBe(1);
   });
 
-  describe('Text input and clear button container', () => {
-    it('Should render without errors', () => {
-      const inputAndClear = findByTestAttr(wrapper, 'inputAndClearContainer');
-      expect(inputAndClear.length).toBe(1);
-    });
+  it('Should render message box without errors', () => {
+    const messageBox = findByTestAttr(wrapper, 'messageBox');
+    expect(messageBox.length).toBe(1);
   });
 
-  describe('Text input', () => {
-    it('Should render without errors', () => {
-      const textInput = findByTestAttr(wrapper, 'textInput');
-      expect(textInput.length).toBe(1);
-    });
+  it('Should render text input without errors', () => {
+    const textInput = findByTestAttr(wrapper, 'textInput');
+    expect(textInput.length).toBe(1);
   });
 
-  describe('Form buttons container (Go! and Play Again!)', () => {
-    it('Should render without errors', () => {
-      const formButtons = findByTestAttr(wrapper, 'goPlayContainer');
-      expect(formButtons.length).toBe(1);
-    });
+  it('Should render button container without errors', () => {
+    const formButtons = findByTestAttr(wrapper, 'goPlayContainer');
+    expect(formButtons.length).toBe(1);
   });
 
   describe('Checking PropTypes', () => {

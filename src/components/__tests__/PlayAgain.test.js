@@ -10,18 +10,9 @@ describe('PlayAgain component', () => {
     wrapper = shallow(<PlayAgain {...testProps} />);
   });
 
-  describe('Container Div', () => {
-    it('Should render without errors', () => {
-      const containerDiv = findByTestAttr(wrapper, 'playAgainContainer');
-      expect(containerDiv.length).toBe(1);
-    });
-  });
-
-  describe('Play Again button', () => {
-    it('Should render without errors', () => {
-      const button = findByTestAttr(wrapper, 'playAgainButton');
-      expect(button.length).toBe(1);
-    });
+  it('Should render button without errors', () => {
+    const button = findByTestAttr(wrapper, 'playAgainButton');
+    expect(button.length).toBe(1);
   });
 
   describe('Checking PropTypes', () => {
