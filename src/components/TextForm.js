@@ -22,7 +22,7 @@ const TextForm = props => {
   }
 
   return (
-    <div className="text-box-container">
+    <div className="text-box-container" data-test="textBoxContainer">
       <div className="message" data-test="messageBox">
         {successStatus}
       </div>

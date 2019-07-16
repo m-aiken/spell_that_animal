@@ -10,18 +10,9 @@ describe('SubmitButton component', () => {
     wrapper = shallow(<SubmitButton {...testProps} />);
   });
 
-  describe('Container Div', () => {
-    it('Should render without errors', () => {
-      const containerDiv = findByTestAttr(wrapper, 'submitContainer');
-      expect(containerDiv.length).toBe(1);
-    });
-  });
-
-  describe('Submit button', () => {
-    it('Should render without errors', () => {
-      const button = findByTestAttr(wrapper, 'submitButton');
-      expect(button.length).toBe(1);
-    });
+  it('Should render button without errors', () => {
+    const button = findByTestAttr(wrapper, 'submitButton');
+    expect(button.length).toBe(1);
   });
 
   describe('Checking PropTypes', () => {
