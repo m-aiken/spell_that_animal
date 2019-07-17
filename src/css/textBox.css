@@ -30,6 +30,7 @@
 
 .submit-button,
 .play-again-button {
+  font-family: 'Jua', sans-serif;
   font-size: 1.5rem;
   padding: 0px 25px;
   border-radius: 5px;
